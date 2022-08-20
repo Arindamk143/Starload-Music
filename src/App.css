@@ -1,38 +1,100 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff&family=Silkscreen&display=swap');
+*{
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.mainBody{
+  /* background-color: black; */
+  background: url(./components//back.jpg) no-repeat center center/cover;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  height: 100vh;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  /* opacity: 0.7; */
 }
-
-.App-link {
-  color: #61dafb;
+h1{
+  color: red;
+  text-shadow: 4px -4px 10px black;
+  font-family: 'Silkscreen', cursive;
+  font-size: 4rem;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.mainBody ol{
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+  margin-top: 5vh;
+}
+.mainBody ol li{
+  padding: 1vh 0px;
+  display: flex;
+  flex-direction: row;
+}
+.mainBody ol li img{
+  width: 2.5vw;
+  height: 5vh;
+}
+.mainBody ol li span{
+  color: rgb(217, 255, 0);
+  text-shadow: 3px 3px 10px black;
+  font-weight: bold;
+  font-size: 1.5rem;
+  font-family: 'DynaPuff', cursive;
+}
+#logoChange{
+  position: absolute;
+  top: 32vh;
+  right: 15vw;
+  animation-name: motion;
+  animation-duration: 5s;
+  animation-play-state: running;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  transition: all;
+}
+@keyframes motion {
+  0%{
+    top: 80vh;
   }
-  to {
-    transform: rotate(360deg);
+  25%{
+    top: -10vh;
+    right: 10vh;
+  }
+  50%{
+    left: 10vh;
+    top: 80vh;
+  }
+  100%{
+    right: 10vh;
+  }
+}
+@media only screen and (max-width:600px){
+  h1{
+    color: red;
+    text-shadow: 4px -4px 10px black;
+    font-family: 'Silkscreen', cursive;
+    font-size: 2rem;
+    text-align: center;
+  }
+  .mainBody{
+    /* background-color: black; */
+    background: url(./components//back.jpg) no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+  }
+  .mainBody ol li img{
+    width: 9vw;
+    height: 5vh;
+  }
+  .mainBody ol li span{
+    color: rgb(217, 255, 0);
+    text-shadow: 3px 3px 10px black;
+    font-weight: bold;
+    font-size: 1rem;
+    font-family: 'DynaPuff', cursive;
   }
 }
